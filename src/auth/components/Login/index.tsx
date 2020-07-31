@@ -1,10 +1,13 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 
+import { loginValidation } from "../../../utils";
+
 const Login = () => {
   return (
     <Formik
       initialValues={{ name: "", email: "" }}
+      validationSchema={loginValidation}
       onSubmit={async (values) => {
         await new Promise((resolve) => setTimeout(resolve, 500));
         alert(JSON.stringify(values, null, 2));
