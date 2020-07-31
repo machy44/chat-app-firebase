@@ -1,10 +1,14 @@
-const theme = {
+export const lightTheme = {
   colors: {
     black: "#000e1a",
     white: "#fff",
-    blue: "#007ce0",
+    background: "#007ce0",
     navy: "#004175",
   },
 };
 
-export default theme;
+export const darkTheme = {
+  colors: {
+    background: "#000e1a",
+  },
+};
