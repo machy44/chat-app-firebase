@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "@emotion/styled";
 import { Checkbox } from "semantic-ui-react";
-import { color, ColorProps } from "styled-system";
+import { ColorProps } from "styled-system";
 // import theme from "./theme";
 
 interface PageLayoutProps {
@@ -11,18 +11,17 @@ interface PageLayoutProps {
 const Box = styled.div<PageLayoutProps | ColorProps>`
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-// Box.defaultProps = {}
-
 const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   return (
-    <div>
+    <main>
       <Checkbox toggle />
       <Box>{children}</Box>
-    </div>
+    </main>
   );
 };
 
