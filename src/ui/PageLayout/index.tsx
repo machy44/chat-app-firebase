@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import styled from "@emotion/styled";
 import { Checkbox } from "semantic-ui-react";
 import { ColorProps } from "styled-system";
+import Navigation from "ui/Menu";
 // import theme from "./theme";
 
 interface PageLayoutProps {
@@ -19,6 +20,7 @@ const Box = styled.div<PageLayoutProps | ColorProps>`
 const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
   return (
     <main>
+      <Navigation />
       <Checkbox toggle />
       <Box>{children}</Box>
     </main>
